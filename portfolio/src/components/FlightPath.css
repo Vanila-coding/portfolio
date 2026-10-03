@@ -1,0 +1,58 @@
+.flight-path {
+  position: relative;
+  max-width: 680px;
+}
+
+.flight-path::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 1px;
+  background: linear-gradient(var(--cyan), var(--blue));
+}
+
+.flight-path__step {
+  position: relative;
+  padding: 0 0 40px 44px;
+}
+
+.flight-path__step:last-child {
+  padding-bottom: 0;
+}
+
+.flight-path__marker {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--cyan);
+  border-radius: 50%;
+  background: var(--navy);
+}
+
+.flight-path__step:last-child .flight-path__marker {
+  border-color: var(--amber);
+}
+
+.flight-path__content {
+  display: grid;
+  gap: 6px;
+}
+
+.flight-path__period {
+  color: var(--cyan);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.flight-path__title {
+  font-size: 1.25rem;
+}
+
+.flight-path__description {
+  max-width: 36rem;
+}

@@ -1,0 +1,33 @@
+.trajectory-line {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: clamp(40px, 6vw, 72px);
+  overflow: visible;
+}
+
+.trajectory-line__path {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-opacity: 0.6;
+  stroke-width: 1.5;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: trajectory-draw 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+}
+
+.trajectory-line__point {
+  fill: var(--navy);
+  stroke: var(--muted);
+  stroke-width: 2;
+}
+
+.trajectory-line__point--end {
+  stroke: var(--amber);
+}
+
+@keyframes trajectory-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

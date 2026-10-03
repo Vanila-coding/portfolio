@@ -1,0 +1,29 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 40px;
+}
+
+.about__text {
+  display: grid;
+  gap: 28px;
+}
+
+.about__text > p {
+  max-width: 36rem;
+  font-size: 1.0625rem;
+}
+
+.about__interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 880px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 64px;
+  }
+}
